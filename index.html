@@ -3,98 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>南斯拉夫佛学院</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>CJack's Blog</title>
+    <link rel="stylesheet" href="https://ik.imagekit.io/cjack/OPPO%20Sans%20Medium/result.css?updatedAt=1733565886168">
+    <link rel="stylesheet" href="styles.css">
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
         body {
-            font-family: 'Noto Sans SC', sans-serif;
-            background-color: #f7f7f7;
-            color: #333;
-            line-height: 1.6;
+            font-family: 'OPPO Sans Medium', Roboto, sans-serif;
+            font-weight: 400;
         }
-        .container {
-            margin: auto;
-            background: #fff;
-            padding: 20px;
-        }
-        .header, .footer {
-            text-align: center;
-            background: #990000;
-            color: #fff;
-            padding: 20px 0;
-        }
-        .nav {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            background: #333;
-        }
-        .nav li {
-            margin: 0 10px;
-        }
-        .nav a {
-            color: #fff;
-            text-decoration: none;
-            padding: 10px 15px;
-            display: block;
-        }
-        .nav a:hover {
-            background: #990000;
-        }
-        .content {
-            padding: 20px;
-            text-align: center;
+        header, footer {
+            font-family: 'OPPO Sans Medium', sans-serif;
+            font-weight: 300;
         }
         h1, h2 {
-            margin: 20px 0;
+            font-family: 'OPPO Sans Medium', sans-serif;
+            font-weight: 500;
+        }
+        .subtitle {
+            font-weight: 300;
+            /* 使用 OPPO Sans Medium 的权重 */
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <div class="header">
-        <h1>南斯拉夫佛学院</h1>
-        <p>秉承中国特色社会主义教育理念</p>
+    <header>
+        <h1>CJACK's Blog</h1>
+        <div class="subtitle">
+            98% Built by GPT4o
+        </div>
+        <nav>
+            <a href="#" id="homeLink">首页</a>
+            <a href="#" id="aboutLink">关于</a>
+            <a href="#" id="contactLink">联系</a>
+            <button id="toggleButton" title="切换暗黑/明亮模式">🌙</button>
+        </nav>
+    </header>
+
+    <main id="postList">
+        <!-- 文章列表将在这里生成 -->
+    </main>
+
+    <div id="introContent" style="display: none;">
+        <div class="intro-text" id="aboutContent">
+            <h2>＃关于</h2>
+            <p>
+                【这是哪】这是CJackHwang的个人博客，分享各种文章和生活。你所访问的这个博客是由我几乎没有进行任何手动编写代码的情况下指导GPT4o进行开发的静态博客，除内容外基本没有任何人工成分，完全从零开发且没有引用任何框架。当然了，能纯靠AI进行开发也是一门技术活，不是所有人都可以像我一样调教到这种程度。本博客为了节约服务器成本，且便于管理，提高访问速度，在经过一系列考虑之下决定抛弃Typecho而重构博客是最好的做法。由于域名续费价格过高，我目前要尽可能节约一切成本来达到最好效果！【关于我】我目前是一名高中生，爱好广泛，喜欢研究信息技术相关知识，时不时给学校生活创造些小惊喜
+            </p>
+        </div>
+        <div class="intro-text" id="contactContent">
+            <style>
+                .contact-link {
+                    color: inherit;
+                    /* 使链接颜色与文本一致 */
+                    text-decoration: none;
+                    /* 去除下划线 */
+                }
+                .contact-link:hover {
+                    text-decoration: underline;
+                    /* 悬停时添加下划线 */
+                }
+                p {
+                    margin-bottom: 1.5em;
+                    /* 每个联系方式下空开一行 */
+                }
+            </style>
+
+            <h2>＃联系</h2>
+            <p>
+                您可以通过点击以下方式与我联系：
+            </p>
+            <p>
+                【QQ】<a class="contact-link" href="tencent://message/?uin=2073782156">2073782156</a>
+            </p>
+            <p>
+                【私人邮箱】<a class="contact-link" href="mailto:2073782156@qq.com">2073782156@qq.com</a>
+            </p>
+            <p>
+                【工作邮箱】<a class="contact-link" href="mailto:tetr20071102@gmail.com">tetr20071102@gmail.com</a>
+            </p>
+            <p>
+                【X】<a class="contact-link" href="https://x.com/tetr5354?s=09">X.com</a>
+            </p>
+            <p>
+                【GitHub】<a class="contact-link" href="https://github.com/CJackHwang">CJackHwang</a>
+            </p>
+
+        </div>
     </div>
 
-    <ul class="nav">
-        <li><a href="./index.html">首页</a></li>
-        <li><a href="./intro.html">学校简介</a></li>
-        <li><a href="./values.html">党建赋能</a></li>
-        <li><a href="./courses.html">课程设置</a></li>
-        <li><a href="./teachers.html">师资队伍</a></li>
-        <li><a href="./news.html">学校新闻</a></li>
-        <li><a href="./policy.html">教学方针</a></li>
-    </ul>
+    <footer>
+        <p>
+            &copy; 2024 CJack's blog. 保留所有权利.
+        </p>
+        <p>
+            <a class="contact-link" href="https://icp.gov.moe/?keyword=20241982" target="_blank" rel="noopener noreferrer">-萌ICP备20241982号-</a>
+        </p>
+    </footer>
 
-    <div class="content">
-        <h2>欢迎来到南斯拉夫佛学院</h2>
-        <p>我校，作为新时代的教育旗舰，高举中国特色社会主义伟大事业的旗帜，全面实施九九六教学方针，以此铸就学生学习的新高峰！我们的教育理念，紧密围绕党的教育方针，确保每一滴教育的墨水都渗透着社会主义核心价值观的精髓。</p>
-        <p>    在九小时学习的辉煌殿堂中，学生们的思维被锻造得锐利无比；在九小时休息的宁静港湾里，他们的心灵得到最温柔的抚慰；在六小时睡眠的甜蜜梦境中，他们的精力得到充分的恢复。如此科学的时间安排，无不体现了我们对教育规律的深刻理解和对学生全面发展的无限关怀。
-</p>
-        <p>    【跑操】，那是我校一道靓丽的风景线，是体育锻炼与集体主义的完美结合。学生们在整齐划一的步伐中，不仅锻炼了身体，更是对团结协作精神的最佳诠释。我们坚信，只有健康的体魄和坚定的意志，才能承担起中华民族伟大复兴的历史使命。
-课程改革，我们走在时代的前沿，不断优化课程结构，丰富学习内容，注重跨学科学习，培养学生的综合素养和创新能力。我们的课堂，是知识的盛宴，是思维的火花，是未来的孵化器。
-</p>
-        <p>    【学习系统】，我们坚持科学合理，注重过程，关注差异，激发动力。我们的评价体系，就像一面镜子，让学生们看到自己的成长，感受到自己的进步，从而更加自信地迈向成功的未来。
-</p>
-        <p>    【学习氛围】，我们打造的是知识的圣地，学习的乐园。在这里，每一寸土地都弥漫着学习的气息，每一缕空气都充满了智慧的光芒。我们关注学生的心理健康，提供个性化的学习支持，让每一位学子都能在这里找到属于自己的舞台。
-</p>
-        <p>    【学习模式】，我们创新无限，信息技术与教育教学的深度融合，在线学习与混合式学习的完美结合，为学生提供了多样化的学习资源和工具，满足了个性化学习的需求。我们的目标，是让学习成为一种享受，一种追求，一种生活方式。
-</p>
-        <p>    让我们携手并进，在党的教育路线指引下，不忘初心，牢记使命，为实现教育现代化、建设教育强国贡献我们的智慧和力量。我们坚信，在全校师生的共同努力下，我校必将培养出一批又一批德智体美全面发展的社会主义建设者和接班人，为中华民族的伟大复兴做出新的更大贡献！
-</p>
-    </div>
-
-    <div class="footer">
-        <p>版权所有 © 南斯拉夫佛学院 2024-2077</p>
-    </div>
-</div>
-
+    <script src="script.js"></script>
 </body>
 </html>
