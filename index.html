@@ -6,101 +6,88 @@
     <title>CJack's Blog</title>
     <link rel="stylesheet" href="https://ik.imagekit.io/cjack/OPPO%20Sans%20Medium/result.css?updatedAt=1733565886168">
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: 'OPPO Sans Medium', Roboto, sans-serif;
-            font-weight: 400;
-        }
-        header, footer {
-            font-family: 'OPPO Sans Medium', sans-serif;
-            font-weight: 300;
-        }
-        h1, h2 {
-            font-family: 'OPPO Sans Medium', sans-serif;
-            font-weight: 500;
-        }
-        .subtitle {
-            font-weight: 300;
-            /* 使用 OPPO Sans Medium 的权重 */
-        }
-    </style>
-</head>
-<body>
 
-    <header>
-        <h1>CJACK's Blog</h1>
-        <div class="subtitle">
-            98% Built by GPT4o
+    <body>
+
+        <header>
+            <h1>CJACK's Blog</h1>
+            <div class="subtitle">
+                98% Built by GPT4o
+            </div>
+            <p>
+            </p>
+            <nav>
+                <a href="#" id="homeLink">首页</a>
+                <a href="#" id="aboutLink">关于</a>
+                <a href="#" id="contactLink">联系</a>
+                <button id="toggleButton" title="切换暗黑/明亮模式">🌙</button>
+            </nav>
+        </header>
+
+        <main id="postList">
+            <!-- 文章列表将在这里生成 -->
+        </main>
+
+        <div id="introContent" style="display: none;">
+            <div class="intro-text" id="aboutContent">
+                <h2>＃关于</h2>
+                <p>
+                    【这是哪】这是CJackHwang的个人博客，分享各种文章和生活。你所访问的这个博客是由我几乎没有进行任何手动编写代码的情况下指导GPT4o进行开发的静态博客，除内容外基本没有任何人工成分，完全从零开发且没有引用任何框架。当然了，能纯靠AI进行开发也是一门技术活，不是所有人都可以像我一样调教到这种程度。本博客为了节约服务器成本，且便于管理，提高访问速度，在经过一系列考虑之下决定抛弃Typecho而重构博客是最好的做法。由于域名续费价格过高，我目前要尽可能节约一切成本来达到最好效果！
+                </p>
+                <p>
+                    【关于我】我目前是一名高中生，爱好广泛，喜欢研究信息技术相关知识，时不时给学校生活创造些小惊喜，欢迎找我闲聊（记得备注来源）
+                </p>
+            </div>
+            <div class="intro-text" id="contactContent">
+                <style>
+                    .contact-link {
+                        color: inherit;
+                        /* 使链接颜色与文本一致 */
+                        text-decoration: none;
+                        /* 去除下划线 */
+                    }
+                    .contact-link:hover {
+                        text-decoration: underline;
+                        /* 悬停时添加下划线 */
+                    }
+                    p {
+                        margin-bottom: 1.5em;
+                        /* 每个联系方式下空开一行 */
+                    }
+                </style>
+
+                <h2>＃联系</h2>
+                <p>
+                    您可以通过点击以下方式与我联系：
+                </p>
+                <p>
+                    【QQ】<a class="contact-link" href="tencent://message/?uin=2073782156">2073782156</a>
+                </p>
+                <p>
+                    【私人邮箱】<a class="contact-link" href="mailto:2073782156@qq.com">2073782156@qq.com</a>
+                </p>
+                <p>
+                    【工作邮箱】<a class="contact-link" href="mailto:tetr20071102@gmail.com">tetr20071102@gmail.com</a>
+                </p>
+                <p>
+                    【X】<a class="contact-link" href="https://x.com/tetr5354?s=09">X.com</a>
+                </p>
+                <p>
+                    【GitHub】<a class="contact-link" href="https://github.com/CJackHwang">CJackHwang</a>
+                </p>
+
+            </div>
         </div>
-        <nav>
-            <a href="#" id="homeLink">首页</a>
-            <a href="#" id="aboutLink">关于</a>
-            <a href="#" id="contactLink">联系</a>
-            <button id="toggleButton" title="切换暗黑/明亮模式">🌙</button>
-        </nav>
-    </header>
 
-    <main id="postList">
-        <!-- 文章列表将在这里生成 -->
-    </main>
+        <footer>
+            <p>
+                &copy; 2024 CJackHwang. 保留所有权利.
+            </p>
+            <p>
+                <a class="contact-link" href="https://icp.gov.moe/?keyword=20241982" target="_blank" rel="noopener noreferrer">-萌ICP备20241982号-</a>
+            </p>
+        </footer>
 
-    <div id="introContent" style="display: none;">
-        <div class="intro-text" id="aboutContent">
-            <h2>＃关于</h2>
-            <p>
-                【这是哪】这是CJackHwang的个人博客，分享各种文章和生活。你所访问的这个博客是由我几乎没有进行任何手动编写代码的情况下指导GPT4o进行开发的静态博客，除内容外基本没有任何人工成分，完全从零开发且没有引用任何框架。当然了，能纯靠AI进行开发也是一门技术活，不是所有人都可以像我一样调教到这种程度。本博客为了节约服务器成本，且便于管理，提高访问速度，在经过一系列考虑之下决定抛弃Typecho而重构博客是最好的做法。由于域名续费价格过高，我目前要尽可能节约一切成本来达到最好效果！【关于我】我目前是一名高中生，爱好广泛，喜欢研究信息技术相关知识，时不时给学校生活创造些小惊喜
-            </p>
-        </div>
-        <div class="intro-text" id="contactContent">
-            <style>
-                .contact-link {
-                    color: inherit;
-                    /* 使链接颜色与文本一致 */
-                    text-decoration: none;
-                    /* 去除下划线 */
-                }
-                .contact-link:hover {
-                    text-decoration: underline;
-                    /* 悬停时添加下划线 */
-                }
-                p {
-                    margin-bottom: 1.5em;
-                    /* 每个联系方式下空开一行 */
-                }
-            </style>
-
-            <h2>＃联系</h2>
-            <p>
-                您可以通过点击以下方式与我联系：
-            </p>
-            <p>
-                【QQ】<a class="contact-link" href="tencent://message/?uin=2073782156">2073782156</a>
-            </p>
-            <p>
-                【私人邮箱】<a class="contact-link" href="mailto:2073782156@qq.com">2073782156@qq.com</a>
-            </p>
-            <p>
-                【工作邮箱】<a class="contact-link" href="mailto:tetr20071102@gmail.com">tetr20071102@gmail.com</a>
-            </p>
-            <p>
-                【X】<a class="contact-link" href="https://x.com/tetr5354?s=09">X.com</a>
-            </p>
-            <p>
-                【GitHub】<a class="contact-link" href="https://github.com/CJackHwang">CJackHwang</a>
-            </p>
-
-        </div>
-    </div>
-
-    <footer>
-        <p>
-            &copy; 2024 CJack's blog. 保留所有权利.
-        </p>
-        <p>
-            <a class="contact-link" href="https://icp.gov.moe/?keyword=20241982" target="_blank" rel="noopener noreferrer">-萌ICP备20241982号-</a>
-        </p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
+        <script src="script.js"></script>
+    </body>
 </html>

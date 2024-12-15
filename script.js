@@ -4,16 +4,16 @@ const introContent = document.getElementById('introContent');
 const aboutContent = document.getElementById('aboutContent');
 const contactContent = document.getElementById('contactContent');
 
-// Initialize theme based on user preference
+// 根据用户偏好初始化主题
 const setInitialTheme = () => {
     const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     document.body.classList.toggle('dark-mode', isDarkMode);
-    toggleButton.innerHTML = isDarkMode ? '&#9728;' : '🌙'; // Sun or moon icon
+    toggleButton.innerHTML = isDarkMode ? '&#9728;' : '🌙'; // 太阳或月亮图标
 };
 
 setInitialTheme();
 
-// Toggle theme on button click
+// 点击按钮切换主题
 toggleButton.addEventListener('click', () => {
     const isDarkMode = document.body.classList.toggle('dark-mode');
     toggleButton.style.backgroundColor = isDarkMode ? '#333333' : '#f0f0f0';
@@ -22,23 +22,23 @@ toggleButton.addEventListener('click', () => {
     setTimeout(() => toggleButton.classList.remove('rotate'), 600);
 });
 
-// Posts file names
-const postFiles = ['博客公告栏.txt','奖状生成器.txt','中京东日.txt'];
+// 帖子文件名称
+const postFiles = ['博客公告栏.txt', '奖状生成器.txt', '中京东日.txt'];
 
-// Fetch post content
+// 获取帖子内容
 const fetchPost = async (file) => {
     const response = await fetch(`posts/${file}`);
     const data = await response.text();
     return parsePost(data);
 };
 
-// Parse post content
+// 解析帖子内容
 const parsePost = (text) => {
     const [title, meta, ...content] = text.split('\n').map(line => line.trim());
     return { title, meta, content: content.join('\n').trim() };
 };
 
-// Render posts to the list
+// 将帖子渲染到列表中
 const renderPosts = (posts) => {
     postList.innerHTML = posts.map((post, index) => `
         <div class="post-card" onclick="toggleContent(${index})">
@@ -49,10 +49,10 @@ const renderPosts = (posts) => {
     `).join('');
 };
 
-// Animation state
+// 动画状态
 let isAnimating = false;
 
-// Toggle post content visibility
+// 切换帖子内容的可见性
 const toggleContent = (index) => {
     const content = document.getElementById(`content-${index}`);
     const isVisible = content.style.maxHeight !== '0px';
@@ -77,7 +77,7 @@ const toggleContent = (index) => {
         const interval = setInterval(() => {
             if (indexChar < text.length) {
                 content.textContent += text.charAt(indexChar);
-                content.style.maxHeight = content.scrollHeight + 'px'; // Adjust max height dynamically
+                content.style.maxHeight = content.scrollHeight + 'px'; // 动态调整最大高度
                 indexChar++;
             } else {
                 clearInterval(interval);
@@ -92,7 +92,7 @@ const toggleContent = (index) => {
     }
 };
 
-// Fade out effect
+// 淡出效果
 const fadeOut = (element, callback) => {
     element.style.opacity = '1';
     element.style.transition = 'opacity 0.5s ease';
@@ -100,20 +100,20 @@ const fadeOut = (element, callback) => {
     setTimeout(() => {
         element.style.display = 'none';
         if (callback) callback();
-    }, 500);
+    }, 150);
 };
 
-// Fade in effect
+// 淡入效果
 const fadeIn = (element) => {
     element.style.display = 'block';
     element.style.opacity = '0';
     element.style.transition = 'opacity 0.5s ease';
     setTimeout(() => {
         element.style.opacity = '1';
-    }, 50);
+    }, 200);
 };
 
-// Navigation event handlers
+// 导航事件处理程序
 document.getElementById('aboutLink').addEventListener('click', (e) => {
     e.preventDefault();
     fadeOut(postList, () => {
@@ -142,5 +142,5 @@ document.getElementById('homeLink').addEventListener('click', (e) => {
     });
 });
 
-// Initialize posts
+// 初始化帖子
 Promise.all(postFiles.map(fetchPost)).then(renderPosts);
