@@ -8,7 +8,7 @@ const contactContent = document.getElementById('contactContent');
 const setInitialTheme = () => {
     const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     document.body.classList.toggle('dark-mode', isDarkMode);
-    toggleButton.innerHTML = isDarkMode ? '&#9728;' : '🌙'; // 太阳或月亮图标
+    toggleButton.innerHTML = isDarkMode ? '&#9728;' : '&#9789'; // 太阳或月亮图标
 };
 
 setInitialTheme();
@@ -17,7 +17,7 @@ setInitialTheme();
 toggleButton.addEventListener('click', () => {
     const isDarkMode = document.body.classList.toggle('dark-mode');
     toggleButton.style.backgroundColor = isDarkMode ? '#333333' : '#f0f0f0';
-    toggleButton.innerHTML = isDarkMode ? '&#9728;' : '🌙';
+    toggleButton.innerHTML = isDarkMode ? '&#9728;' : '&#9789';
     toggleButton.classList.add('rotate');
     setTimeout(() => toggleButton.classList.remove('rotate'), 600);
 });
